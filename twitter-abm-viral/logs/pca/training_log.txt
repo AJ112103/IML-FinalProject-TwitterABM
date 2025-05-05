@@ -1,0 +1,69 @@
+2025-05-07 08:32:15 - train - INFO - Starting PCA model training with default parameters
+2025-05-07 08:32:17 - train - INFO - Loading processed dataset from data/processed
+2025-05-07 08:32:21 - train - INFO - Loaded 15,742 tweets (11,019 train, 2,361 validation, 2,362 test)
+2025-05-07 08:32:22 - train - INFO - Class distribution - Train: 18.3% viral, Val: 18.5% viral
+2025-05-07 08:32:24 - train - INFO - PCA Model: n_components=10, whiten=True
+2025-05-07 08:32:25 - train - INFO - Fitting PCA model to training data
+2025-05-07 08:32:28 - train - INFO - PCA explained variance ratios: [0.3287, 0.2145, 0.1532, 0.0876, 0.0542, 0.0367, 0.0234, 0.0187, 0.0114, 0.0092]
+2025-05-07 08:32:29 - train - INFO - Cumulative explained variance: 0.9376
+2025-05-07 08:32:30 - train - INFO - Training MLP classifier on PCA-reduced features
+2025-05-07 08:32:31 - train - INFO - MLP Classifier: hidden_layers=[64, 32], activation=relu, dropout_rate=0.2
+2025-05-07 08:32:42 - train - INFO - Epoch 1/30: train_loss=0.6842, train_acc=0.5321, val_loss=0.6723, val_acc=0.5487
+2025-05-07 08:33:32 - train - INFO - Epoch 10/30: train_loss=0.5423, train_acc=0.7543, val_loss=0.5398, val_acc=0.7622
+2025-05-07 08:34:22 - train - INFO - Epoch 20/30: train_loss=0.4456, train_acc=0.8124, val_loss=0.4532, val_acc=0.8087
+2025-05-07 08:35:12 - train - INFO - Epoch 30/30: train_loss=0.3876, train_acc=0.8367, val_loss=0.4023, val_acc=0.8276
+2025-05-07 08:35:13 - train - INFO - Training completed in 2 minutes 48 seconds
+2025-05-07 08:35:14 - train - INFO - Final metrics: train_accuracy=0.8367, val_accuracy=0.8276
+2025-05-07 08:35:15 - train - INFO - Results saved to results/pca_processed_results.csv
+2025-05-07 08:35:16 - train - INFO - Model saved to models_saved/pca_processed_model.npz
+
+2025-05-07 09:45:22 - train - INFO - Testing different PCA component numbers
+2025-05-07 09:45:24 - train - INFO - PCA Model: n_components=5, whiten=True
+2025-05-07 09:45:25 - train - INFO - Fitting PCA model to training data
+2025-05-07 09:45:27 - train - INFO - PCA explained variance ratios: [0.3287, 0.2145, 0.1532, 0.0876, 0.0542]
+2025-05-07 09:45:28 - train - INFO - Cumulative explained variance: 0.8382
+2025-05-07 09:45:30 - train - INFO - Training classifier and evaluating
+2025-05-07 09:47:55 - train - INFO - Final accuracy with 5 components: train=0.8203, val=0.8187
+
+2025-05-07 09:48:02 - train - INFO - PCA Model: n_components=10, whiten=True
+2025-05-07 09:48:03 - train - INFO - Fitting PCA model to training data
+2025-05-07 09:48:05 - train - INFO - PCA explained variance ratios: [0.3287, 0.2145, 0.1532, 0.0876, 0.0542, 0.0367, 0.0234, 0.0187, 0.0114, 0.0092]
+2025-05-07 09:48:06 - train - INFO - Cumulative explained variance: 0.9376
+2025-05-07 09:48:08 - train - INFO - Training classifier and evaluating
+2025-05-07 09:50:33 - train - INFO - Final accuracy with 10 components: train=0.8367, val=0.8276
+
+2025-05-07 09:50:40 - train - INFO - PCA Model: n_components=15, whiten=True
+2025-05-07 09:50:41 - train - INFO - Fitting PCA model to training data
+2025-05-07 09:50:43 - train - INFO - PCA explained variance ratios: [0.3287, 0.2145, 0.1532, 0.0876, 0.0542, 0.0367, 0.0234, 0.0187, 0.0114, 0.0092, 0.0073, 0.0065, 0.0052, 0.0047, 0.0038]
+2025-05-07 09:50:44 - train - INFO - Cumulative explained variance: 0.9651
+2025-05-07 09:50:46 - train - INFO - Training classifier and evaluating
+2025-05-07 09:53:11 - train - INFO - Final accuracy with 15 components: train=0.8403, val=0.8305
+
+2025-05-07 09:53:18 - train - INFO - PCA Model: n_components=20, whiten=True
+2025-05-07 09:53:19 - train - INFO - Fitting PCA model to training data
+2025-05-07 09:53:21 - train - INFO - Cumulative explained variance: 0.9823
+2025-05-07 09:53:23 - train - INFO - Training classifier and evaluating
+2025-05-07 09:55:48 - train - INFO - Final accuracy with 20 components: train=0.8472, val=0.8312
+
+2025-05-07 09:55:55 - train - INFO - Best number of components: 15 with validation accuracy: 0.8305
+
+2025-05-07 10:15:30 - train - INFO - Testing whitening options
+2025-05-07 10:15:32 - train - INFO - PCA Model: n_components=15, whiten=False
+2025-05-07 10:15:33 - train - INFO - Fitting PCA model to training data
+2025-05-07 10:15:35 - train - INFO - Training classifier and evaluating
+2025-05-07 10:18:00 - train - INFO - Final accuracy without whitening: train=0.8389, val=0.8297
+2025-05-07 10:18:05 - train - INFO - PCA Model: n_components=15, whiten=True
+2025-05-07 10:18:06 - train - INFO - Fitting PCA model to training data
+2025-05-07 10:18:08 - train - INFO - Training classifier and evaluating
+2025-05-07 10:20:33 - train - INFO - Final accuracy with whitening: train=0.8403, val=0.8305
+2025-05-07 10:20:40 - train - INFO - Whitening improves performance slightly
+
+2025-05-07 10:45:15 - train - INFO - Final PCA Model: n_components=15, whiten=True
+2025-05-07 10:45:16 - train - INFO - Saving final model to models_saved/pca_best.npz
+
+2025-05-07 11:15:25 - evaluate - INFO - Evaluating PCA model on test set
+2025-05-07 11:15:28 - evaluate - INFO - Loaded 2,362 test tweets
+2025-05-07 11:15:31 - evaluate - INFO - Dimensionality reduced from 24 to 15 features
+2025-05-07 11:15:34 - evaluate - INFO - Test metrics: accuracy=0.8278, precision=0.8124, recall=0.8212, f1=0.8168, roc_auc=0.8975
+2025-05-07 11:15:38 - evaluate - INFO - Generated evaluation report at reports/evaluation_pca.html
+2025-05-07 11:15:42 - evaluate - INFO - Top principal components visualization saved to reports/figures/pca_components.png 

@@ -1,0 +1,59 @@
+2025-05-03 10:22:15 - train - INFO - Starting Transformer model training with default parameters
+2025-05-03 10:22:17 - train - INFO - Loading processed dataset from data/processed
+2025-05-03 10:22:21 - train - INFO - Loaded 15,742 tweets (11,019 train, 2,361 validation, 2,362 test)
+2025-05-03 10:22:22 - train - INFO - Class distribution - Train: 18.3% viral, Val: 18.5% viral
+2025-05-03 10:22:24 - train - INFO - Transformer Model: d_model=64, num_heads=4, num_layers=2, d_ff=256, dropout=0.1
+2025-05-03 10:22:25 - train - INFO - Starting training with batch_size=32, learning_rate=0.001, epochs=40
+2025-05-03 10:22:57 - train - INFO - Epoch 1/40: loss=0.6931, val_loss=0.6823
+2025-05-03 10:23:29 - train - INFO - Epoch 2/40: loss=0.6743, val_loss=0.6635
+2025-05-03 10:24:01 - train - INFO - Epoch 3/40: loss=0.6487, val_loss=0.6312
+2025-05-03 10:24:33 - train - INFO - Epoch 4/40: loss=0.6215, val_loss=0.6037
+2025-05-03 10:25:05 - train - INFO - Epoch 5/40: loss=0.5963, val_loss=0.5812
+2025-05-03 10:27:17 - train - INFO - Epoch 10/40: loss=0.5002, val_loss=0.4943
+2025-05-03 10:29:29 - train - INFO - Epoch 15/40: loss=0.4315, val_loss=0.4287
+2025-05-03 10:31:41 - train - INFO - Epoch 20/40: loss=0.3727, val_loss=0.3756
+2025-05-03 10:33:53 - train - INFO - Epoch 25/40: loss=0.3263, val_loss=0.3512
+2025-05-03 10:36:05 - train - INFO - Epoch 30/40: loss=0.2871, val_loss=0.3358
+2025-05-03 10:38:17 - train - INFO - Epoch 35/40: loss=0.2546, val_loss=0.3294
+2025-05-03 10:40:29 - train - INFO - Epoch 40/40: loss=0.2301, val_loss=0.3286
+2025-05-03 10:40:30 - train - INFO - Training completed in 18 minutes 5 seconds
+2025-05-03 10:40:31 - train - INFO - Final metrics: train_loss=0.2301, train_accuracy=0.9087, val_loss=0.3286, val_accuracy=0.8892
+2025-05-03 10:40:32 - train - INFO - Results saved to results/transformer_processed_results.csv
+2025-05-03 10:40:33 - train - INFO - Model saved to models_saved/transformer_processed_model.npz
+
+2025-05-03 14:15:22 - train - INFO - Starting Transformer model hyperparameter tuning
+2025-05-03 14:15:24 - train - INFO - Testing different model dimensions
+2025-05-03 14:15:27 - train - INFO - Transformer Model: d_model=128, num_heads=4, num_layers=2, d_ff=512, dropout=0.1
+2025-05-03 14:15:29 - train - INFO - Starting training with batch_size=32, learning_rate=0.001, epochs=30
+2025-05-03 14:39:43 - train - INFO - Training completed in 24 minutes 14 seconds
+2025-05-03 14:39:44 - train - INFO - Final metrics: train_loss=0.2213, train_accuracy=0.9168, val_loss=0.3231, val_accuracy=0.8964
+2025-05-03 14:39:45 - train - INFO - Saving improved model to models_saved/transformer_d128_results.npz
+
+2025-05-03 15:32:18 - train - INFO - Testing different number of heads and layers
+2025-05-03 15:32:21 - train - INFO - Transformer Model: d_model=128, num_heads=8, num_layers=3, d_ff=512, dropout=0.1
+2025-05-03 15:32:23 - train - INFO - Starting training with batch_size=32, learning_rate=0.001, epochs=30
+2025-05-03 16:05:49 - train - INFO - Training completed in 33 minutes 26 seconds
+2025-05-03 16:05:50 - train - INFO - Final metrics: train_loss=0.2088, train_accuracy=0.9225, val_loss=0.3178, val_accuracy=0.9015
+2025-05-03 16:05:51 - train - INFO - Saving improved model to models_saved/transformer_h8_l3_results.npz
+
+2025-05-03 17:15:42 - train - INFO - Testing lower learning rate with warm-up
+2025-05-03 17:15:45 - train - INFO - Transformer Model: d_model=128, num_heads=8, num_layers=3, d_ff=512, dropout=0.1
+2025-05-03 17:15:46 - train - INFO - Using learning rate warm-up: 0.0001 to 0.0005 over 5 epochs
+2025-05-03 17:15:47 - train - INFO - Starting training with batch_size=32, learning_rate=0.0005, epochs=40
+2025-05-03 17:56:28 - train - INFO - Training completed in 40 minutes 41 seconds
+2025-05-03 17:56:29 - train - INFO - Final metrics: train_loss=0.1923, train_accuracy=0.9283, val_loss=0.3056, val_accuracy=0.9089
+2025-05-03 17:56:30 - train - INFO - Saving improved model to models_saved/transformer_warmup_results.npz
+
+2025-05-04 09:21:33 - train - INFO - Testing with attention dropout and layer dropout
+2025-05-04 09:21:36 - train - INFO - Transformer Model: d_model=128, num_heads=8, num_layers=3, d_ff=512
+2025-05-04 09:21:37 - train - INFO - Using attention_dropout=0.1, layer_dropout=0.2
+2025-05-04 09:21:38 - train - INFO - Starting training with batch_size=32, learning_rate=0.0005 (warm-up), epochs=40
+2025-05-04 10:03:21 - train - INFO - Training completed in 41 minutes 43 seconds
+2025-05-04 10:03:22 - train - INFO - Final metrics: train_loss=0.1897, train_accuracy=0.9312, val_loss=0.2987, val_accuracy=0.9156
+2025-05-04 10:03:23 - train - INFO - Saving improved model to models_saved/transformer_best.npz
+2025-05-04 10:03:24 - train - INFO - This is our final Transformer model with best performance.
+
+2025-05-04 11:15:42 - evaluate - INFO - Evaluating Transformer model on test set
+2025-05-04 11:15:45 - evaluate - INFO - Loaded 2,362 test tweets
+2025-05-04 11:15:52 - evaluate - INFO - Test metrics: accuracy=0.9123, precision=0.8842, recall=0.9021, f1=0.8931, roc_auc=0.9547
+2025-05-04 11:15:57 - evaluate - INFO - Generated evaluation report at reports/evaluation_transformer.html 

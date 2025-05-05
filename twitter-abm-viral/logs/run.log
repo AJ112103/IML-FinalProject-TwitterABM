@@ -1,0 +1,49 @@
+2025-05-04 23:40:43,496 - run - INFO - Starting pipeline
+2025-05-04 23:40:43,496 - run - INFO - Skipping data download
+2025-05-04 23:40:43,496 - run - INFO - Skipping data preprocessing
+2025-05-04 23:40:43,496 - run - INFO - Models to train and evaluate: ['cnn', 'transformer', 'mlp', 'svm']
+2025-05-04 23:40:43,496 - run - INFO - Running: Training cnn model
+2025-05-04 23:40:43,496 - run - INFO - Command: python src/train.py --model cnn --config configs/default.yaml --epochs 25
+2025-05-04 23:40:44,054 - run - INFO - Exit code: 1
+2025-05-04 23:40:44,054 - run - INFO - Completed in 0.56 seconds
+2025-05-04 23:40:44,054 - run - ERROR - Error output: Traceback (most recent call last):
+  File "/Users/dhruvjalan/Desktop/IML-FinalProject/twitter-abm-viral/src/train.py", line 13, in <module>
+    import yaml
+ModuleNotFoundError: No module named 'yaml'
+
+2025-05-04 23:40:44,054 - run - WARNING - Command failed: Training cnn model
+2025-05-04 23:40:44,054 - run - ERROR - Training cnn failed. Skipping evaluation.
+2025-05-04 23:40:44,054 - run - INFO - Running: Training transformer model
+2025-05-04 23:40:44,054 - run - INFO - Command: python src/train.py --model transformer --config configs/default.yaml --epochs 25
+2025-05-04 23:40:44,259 - run - INFO - Exit code: 1
+2025-05-04 23:40:44,260 - run - INFO - Completed in 0.20 seconds
+2025-05-04 23:40:44,260 - run - ERROR - Error output: Traceback (most recent call last):
+  File "/Users/dhruvjalan/Desktop/IML-FinalProject/twitter-abm-viral/src/train.py", line 13, in <module>
+    import yaml
+ModuleNotFoundError: No module named 'yaml'
+
+2025-05-04 23:40:44,260 - run - WARNING - Command failed: Training transformer model
+2025-05-04 23:40:44,260 - run - ERROR - Training transformer failed. Skipping evaluation.
+2025-05-04 23:40:44,260 - run - INFO - Running: Training mlp model
+2025-05-04 23:40:44,260 - run - INFO - Command: python src/train.py --model mlp --config configs/default.yaml --epochs 25
+2025-05-04 23:40:44,461 - run - INFO - Exit code: 1
+2025-05-04 23:40:44,461 - run - INFO - Completed in 0.20 seconds
+2025-05-04 23:40:44,461 - run - ERROR - Error output: Traceback (most recent call last):
+  File "/Users/dhruvjalan/Desktop/IML-FinalProject/twitter-abm-viral/src/train.py", line 13, in <module>
+    import yaml
+ModuleNotFoundError: No module named 'yaml'
+
+2025-05-04 23:40:44,461 - run - WARNING - Command failed: Training mlp model
+2025-05-04 23:40:44,461 - run - ERROR - Training mlp failed. Skipping evaluation.
+2025-05-04 23:40:44,461 - run - INFO - Running: Training svm model
+2025-05-04 23:40:44,461 - run - INFO - Command: python src/train.py --model svm --config configs/default.yaml --epochs 25
+2025-05-04 23:40:44,660 - run - INFO - Exit code: 1
+2025-05-04 23:40:44,660 - run - INFO - Completed in 0.20 seconds
+2025-05-04 23:40:44,660 - run - ERROR - Error output: Traceback (most recent call last):
+  File "/Users/dhruvjalan/Desktop/IML-FinalProject/twitter-abm-viral/src/train.py", line 13, in <module>
+    import yaml
+ModuleNotFoundError: No module named 'yaml'
+
+2025-05-04 23:40:44,660 - run - WARNING - Command failed: Training svm model
+2025-05-04 23:40:44,660 - run - ERROR - Training svm failed. Skipping evaluation.
+2025-05-04 23:40:44,660 - run - INFO - Pipeline completed

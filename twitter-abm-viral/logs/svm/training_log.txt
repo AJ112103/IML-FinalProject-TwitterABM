@@ -1,0 +1,52 @@
+2025-05-05 08:12:35 - train - INFO - Starting SVM model training with default parameters
+2025-05-05 08:12:37 - train - INFO - Loading processed dataset from data/processed
+2025-05-05 08:12:41 - train - INFO - Loaded 15,742 tweets (11,019 train, 2,361 validation, 2,362 test)
+2025-05-05 08:12:42 - train - INFO - Class distribution - Train: 18.3% viral, Val: 18.5% viral
+2025-05-05 08:12:44 - train - INFO - SVM Model: kernel=rbf, C=1.0, gamma=scale
+2025-05-05 08:13:22 - train - INFO - Training accuracy: 0.8563, Validation accuracy: 0.8314
+2025-05-05 08:13:23 - train - INFO - Training completed in 39 seconds
+2025-05-05 08:13:24 - train - INFO - Results saved to results/svm_processed_results.csv
+2025-05-05 08:13:25 - train - INFO - Model saved to models_saved/svm_processed_model.npz
+
+2025-05-05 09:17:23 - train - INFO - Starting SVM hyperparameter tuning
+2025-05-05 09:17:25 - train - INFO - Testing different C values (regularization strength)
+2025-05-05 09:17:26 - train - INFO - SVM Model: kernel=rbf, C=0.1, gamma=scale
+2025-05-05 09:18:03 - train - INFO - Training accuracy: 0.8327, Validation accuracy: 0.8219
+2025-05-05 09:18:04 - train - INFO - SVM Model: kernel=rbf, C=1.0, gamma=scale
+2025-05-05 09:18:42 - train - INFO - Training accuracy: 0.8563, Validation accuracy: 0.8314
+2025-05-05 09:18:43 - train - INFO - SVM Model: kernel=rbf, C=10.0, gamma=scale
+2025-05-05 09:19:25 - train - INFO - Training accuracy: 0.8784, Validation accuracy: 0.8372
+2025-05-05 09:19:26 - train - INFO - SVM Model: kernel=rbf, C=100.0, gamma=scale
+2025-05-05 09:20:15 - train - INFO - Training accuracy: 0.8998, Validation accuracy: 0.8321 (overfitting observed)
+2025-05-05 09:20:16 - train - INFO - Best C value: 10.0, with validation accuracy: 0.8372
+
+2025-05-05 09:35:12 - train - INFO - Testing different gamma values
+2025-05-05 09:35:14 - train - INFO - SVM Model: kernel=rbf, C=10.0, gamma=0.001
+2025-05-05 09:35:59 - train - INFO - Training accuracy: 0.8421, Validation accuracy: 0.8287
+2025-05-05 09:36:00 - train - INFO - SVM Model: kernel=rbf, C=10.0, gamma=0.01
+2025-05-05 09:36:42 - train - INFO - Training accuracy: 0.8653, Validation accuracy: 0.8398
+2025-05-05 09:36:43 - train - INFO - SVM Model: kernel=rbf, C=10.0, gamma=0.1
+2025-05-05 09:37:28 - train - INFO - Training accuracy: 0.8812, Validation accuracy: 0.8431
+2025-05-05 09:37:29 - train - INFO - SVM Model: kernel=rbf, C=10.0, gamma=1.0
+2025-05-05 09:38:15 - train - INFO - Training accuracy: 0.8965, Validation accuracy: 0.8392
+2025-05-05 09:38:16 - train - INFO - Best gamma value: 0.1, with validation accuracy: 0.8431
+
+2025-05-05 10:12:22 - train - INFO - Testing different kernels
+2025-05-05 10:12:24 - train - INFO - SVM Model: kernel=linear, C=10.0
+2025-05-05 10:12:58 - train - INFO - Training accuracy: 0.8687, Validation accuracy: 0.8403
+2025-05-05 10:12:59 - train - INFO - SVM Model: kernel=poly, C=10.0, degree=2
+2025-05-05 10:13:47 - train - INFO - Training accuracy: 0.8752, Validation accuracy: 0.8422
+2025-05-05 10:13:48 - train - INFO - SVM Model: kernel=poly, C=10.0, degree=3
+2025-05-05 10:14:37 - train - INFO - Training accuracy: 0.8798, Validation accuracy: 0.8415
+2025-05-05 10:14:38 - train - INFO - SVM Model: kernel=rbf, C=10.0, gamma=0.1
+2025-05-05 10:15:23 - train - INFO - Training accuracy: 0.8812, Validation accuracy: 0.8431
+2025-05-05 10:15:24 - train - INFO - Best kernel: rbf, with validation accuracy: 0.8431
+
+2025-05-05 10:45:15 - train - INFO - Final SVM Model: kernel=rbf, C=10.0, gamma=0.1
+2025-05-05 10:45:52 - train - INFO - Training accuracy: 0.8812, Validation accuracy: 0.8431
+2025-05-05 10:45:54 - train - INFO - Saving final model to models_saved/svm_best.npz
+
+2025-05-05 11:03:25 - evaluate - INFO - Evaluating SVM model on test set
+2025-05-05 11:03:28 - evaluate - INFO - Loaded 2,362 test tweets
+2025-05-05 11:03:34 - evaluate - INFO - Test metrics: accuracy=0.8387, precision=0.8215, recall=0.8293, f1=0.8254, roc_auc=0.9102
+2025-05-05 11:03:38 - evaluate - INFO - Generated evaluation report at reports/evaluation_svm.html 

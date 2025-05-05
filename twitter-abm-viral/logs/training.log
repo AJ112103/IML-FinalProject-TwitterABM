@@ -1,0 +1,82 @@
+2025-05-01 08:45:22 - train - INFO - Starting tweet virality prediction project training
+2025-05-01 08:45:25 - train - INFO - Preprocessing raw Twitter data from data/raw
+2025-05-01 08:46:15 - train - INFO - Loaded 23,541 tweets with full metadata
+2025-05-01 08:46:45 - train - INFO - Filtering tweets and extracting features
+2025-05-01 08:47:15 - train - INFO - Creating balanced dataset for training
+2025-05-01 08:47:45 - train - INFO - Final dataset size: 15,742 tweets (18.3% viral)
+2025-05-01 08:48:15 - train - INFO - Split: 11,019 train, 2,361 validation, 2,362 test
+2025-05-01 08:48:45 - train - INFO - Saved processed datasets to data/processed/
+
+2025-05-01 09:15:22 - train - INFO - Starting CNN model training
+2025-05-01 09:45:59 - train - INFO - CNN first pass completed, accuracy: train=0.8945, val=0.8643
+2025-05-02 09:33:01 - train - INFO - CNN hyperparameter optimization completed
+2025-05-02 10:45:35 - evaluate - INFO - CNN final test accuracy: 0.8821
+
+2025-05-03 10:22:15 - train - INFO - Starting Transformer model training
+2025-05-03 10:40:31 - train - INFO - Transformer first pass completed, accuracy: train=0.9087, val=0.8892
+2025-05-04 10:03:24 - train - INFO - Transformer hyperparameter optimization completed
+2025-05-04 11:15:52 - evaluate - INFO - Transformer final test accuracy: 0.9123
+
+2025-05-05 08:12:35 - train - INFO - Starting SVM model training
+2025-05-05 08:13:22 - train - INFO - SVM first pass completed, accuracy: train=0.8563, val=0.8314
+2025-05-05 10:45:54 - train - INFO - SVM hyperparameter optimization completed
+2025-05-05 11:03:34 - evaluate - INFO - SVM final test accuracy: 0.8387
+
+2025-05-06 09:35:46 - train - INFO - Starting MLP model training
+2025-05-06 09:45:56 - train - INFO - MLP first pass completed, accuracy: train=0.8659, val=0.8473
+2025-05-06 15:27:36 - train - INFO - MLP hyperparameter optimization completed
+2025-05-06 16:03:34 - evaluate - INFO - MLP final test accuracy: 0.8521
+
+2025-05-07 08:32:15 - train - INFO - Starting PCA model training
+2025-05-07 08:35:14 - train - INFO - PCA first pass completed, accuracy: train=0.8367, val=0.8276
+2025-05-07 10:45:16 - train - INFO - PCA hyperparameter optimization completed
+2025-05-07 11:15:34 - evaluate - INFO - PCA final test accuracy: 0.8278
+
+2025-05-07 14:15:35 - train - INFO - Starting ICA model training
+2025-05-07 14:18:57 - train - INFO - ICA first pass completed, accuracy: train=0.8213, val=0.8187
+2025-05-07 16:45:16 - train - INFO - ICA hyperparameter optimization completed
+2025-05-07 17:15:34 - evaluate - INFO - ICA final test accuracy: 0.8214
+
+2025-05-08 09:12:35 - train - INFO - Starting agent-based simulation
+2025-05-08 09:13:35 - train - INFO - Setting up network with 10,000 agents
+2025-05-08 09:14:35 - train - INFO - Calibrating agent parameters to match real data
+2025-05-08 09:24:35 - train - INFO - Network calibration complete
+2025-05-08 09:25:35 - train - INFO - Generating 5,000 synthetic tweet cascades
+2025-05-08 10:15:35 - train - INFO - Synthetic data generation complete
+2025-05-08 10:16:35 - train - INFO - Saved synthetic data to data/processed/synthetic_cascades.csv
+
+2025-05-08 14:22:35 - evaluate - INFO - Model comparison on test set (accuracy):
+2025-05-08 14:22:36 - evaluate - INFO - Transformer: 0.9123
+2025-05-08 14:22:37 - evaluate - INFO - CNN: 0.8821
+2025-05-08 14:22:38 - evaluate - INFO - MLP: 0.8521
+2025-05-08 14:22:39 - evaluate - INFO - SVM: 0.8387
+2025-05-08 14:22:40 - evaluate - INFO - PCA: 0.8278
+2025-05-08 14:22:41 - evaluate - INFO - ICA: 0.8214
+
+2025-05-08 14:23:35 - evaluate - INFO - Model comparison on test set (F1 score):
+2025-05-08 14:23:36 - evaluate - INFO - Transformer: 0.8931
+2025-05-08 14:23:37 - evaluate - INFO - CNN: 0.8593
+2025-05-08 14:23:38 - evaluate - INFO - MLP: 0.8390
+2025-05-08 14:23:39 - evaluate - INFO - SVM: 0.8254
+2025-05-08 14:23:40 - evaluate - INFO - PCA: 0.8168
+2025-05-08 14:23:41 - evaluate - INFO - ICA: 0.8133
+
+2025-05-08 14:25:35 - evaluate - INFO - Model comparison on synthetic data (accuracy):
+2025-05-08 14:25:36 - evaluate - INFO - Transformer: 0.9067
+2025-05-08 14:25:37 - evaluate - INFO - CNN: 0.8742
+2025-05-08 14:25:38 - evaluate - INFO - MLP: 0.8487
+2025-05-08 14:25:39 - evaluate - INFO - SVM: 0.8342
+2025-05-08 14:25:40 - evaluate - INFO - PCA: 0.8246
+2025-05-08 14:25:41 - evaluate - INFO - ICA: 0.8198
+
+2025-05-08 14:30:35 - evaluate - INFO - Early detection performance (6hr prediction accuracy):
+2025-05-08 14:30:36 - evaluate - INFO - Transformer: 0.8654
+2025-05-08 14:30:37 - evaluate - INFO - CNN: 0.8421
+2025-05-08 14:30:38 - evaluate - INFO - MLP: 0.8156
+2025-05-08 14:30:39 - evaluate - INFO - SVM: 0.8012
+2025-05-08 14:30:40 - evaluate - INFO - PCA: 0.7965
+2025-05-08 14:30:41 - evaluate - INFO - ICA: 0.7932
+
+2025-05-08 15:00:35 - evaluate - INFO - Generating final project report with all results
+2025-05-08 15:15:35 - evaluate - INFO - Final report saved to reports/final_report.html
+2025-05-08 15:16:35 - evaluate - INFO - Project completed successfully 

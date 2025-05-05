@@ -1,0 +1,86 @@
+abm:
+  calibration_epochs: 10
+  influence_factor: 0.7
+  network_density: 0.01
+  num_agents: 10000
+  simulation_steps: 48
+  susceptibility_factor: 0.3
+data:
+  filename: retweet_analysis.csv
+  processed_dir: data/processed
+  processed_path: data/processed
+  random_seed: 42
+  raw_dir: data/raw
+  test_ratio: 0.15
+  test_size: 0.15
+  train_ratio: 0.7
+  train_size: 0.7
+  val_ratio: 0.15
+  val_size: 0.15
+evaluation:
+  bootstrap_samples: 1000
+  confidence_level: 0.95
+  figures_dir: reports/figures
+models:
+  cnn:
+    batch_size: 32
+    dense_layers:
+    - 128
+    - 64
+    dropout_rate: 0.3
+    epochs: 50
+    filters:
+    - 32
+    - 64
+    kernel_sizes:
+    - 3
+    - 3
+    learning_rate: 0.001
+    pool_sizes:
+    - 2
+    - 2
+  dimension_reduction:
+    n_components: 10
+    whiten: true
+  mlp:
+    activation: relu
+    batch_size: 32
+    dropout_rate: 0.2
+    epochs: 50
+    hidden_layers:
+    - 128
+    - 64
+    - 32
+    learning_rate: 0.001
+  svm:
+    C: 1.0
+    gamma: scale
+    kernel: rbf
+    max_iter: 1000
+    tol: 1e-3
+  transformer:
+    batch_size: 32
+    d_ff: 256
+    d_model: 64
+    dropout: 0.1
+    dropout_rate: 0.1
+    embed_dim: 64
+    epochs: 50
+    learning_rate: 0.001
+    num_heads: 4
+    num_layers: 2
+random_seed: 42
+training:
+  batch_size: 32
+  checkpoint_dir: results
+  early_stopping_patience: 5
+  epochs: 50
+  learning_rate: 0.001
+  log_dir: logs
+  metrics:
+  - accuracy
+  - f1
+  - roc_auc
+  - pr_auc
+  weight_decay: 0.0001
+virality_method: retweet_threshold

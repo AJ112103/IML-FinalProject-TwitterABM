@@ -1,0 +1,6 @@
+2025-05-05 17:27:47,664 - evaluate - INFO - Loaded 65 cascades from data/processed
+2025-05-05 17:27:47,669 - evaluate - INFO - Data split: 45 train, 9 validation, 11 test
+2025-05-05 17:27:50,500 - evaluate - INFO - Loaded model from results/svm_best.npz
+2025-05-05 17:29:01,483 - evaluate - INFO - Loaded 65 cascades from data/processed
+2025-05-05 17:29:01,494 - evaluate - INFO - Data split: 45 train, 9 validation, 11 test
+2025-05-05 17:29:01,569 - evaluate - INFO - Loaded model from results/svm_best.npz

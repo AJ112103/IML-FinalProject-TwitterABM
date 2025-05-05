@@ -1,0 +1,147 @@
+2025-05-03 23:08:21,547 - train - INFO - Training cnn model with config from configs/default.yaml
+2025-05-03 23:08:21,559 - train - INFO - Loaded 65 cascades from data/processed
+2025-05-03 23:08:21,561 - train - INFO - Additional features found in metadata (klout_score, sentiment)
+2025-05-03 23:08:21,562 - train - INFO - Data split: 45 train, 9 validation, 11 test
+2025-05-03 23:08:21,562 - train - INFO - Virality threshold: 3.0 (positive rate: 0.31)
+2025-05-03 23:08:21,569 - train - INFO - Initialized CNN model with 13 trainable layers
+2025-05-03 23:34:23,712 - train - INFO - Loading processed dataset
+2025-05-03 23:34:40,746 - train - INFO - Loading processed dataset
+2025-05-03 23:34:40,762 - train - INFO - Using features: ['reach', 'retweetcount', 'likes', 'klout', 'sentiment', 'isreshare', 'klout_norm', 'reach_norm', 'retweetcount_norm', 'likes_norm', 'virality_score']
+2025-05-03 23:34:40,763 - train - INFO - Using target: is_viral
+2025-05-03 23:34:40,787 - train - INFO - Data loaded: X_train: (3500, 11), y_train: (3500,), X_val: (750, 11), y_val: (750,)
+2025-05-03 23:34:40,787 - train - INFO - Class distribution - Train: 9.34% viral, Val: 10.00% viral
+2025-05-03 23:34:40,788 - train - INFO - Training mlp model
+2025-05-03 23:35:17,325 - train - INFO - Loading processed dataset
+2025-05-03 23:35:17,336 - train - INFO - Using features: ['reach', 'retweetcount', 'likes', 'klout', 'sentiment', 'isreshare', 'klout_norm', 'reach_norm', 'retweetcount_norm', 'likes_norm', 'virality_score']
+2025-05-03 23:35:17,336 - train - INFO - Using target: is_viral
+2025-05-03 23:35:17,338 - train - INFO - Data loaded: X_train: (3500, 11), y_train: (3500,), X_val: (750, 11), y_val: (750,)
+2025-05-03 23:35:17,338 - train - INFO - Class distribution - Train: 9.34% viral, Val: 10.00% viral
+2025-05-03 23:35:17,338 - train - INFO - Training mlp model
+2025-05-03 23:35:33,289 - train - INFO - Loading processed dataset
+2025-05-03 23:35:33,301 - train - INFO - Using features: ['reach', 'retweetcount', 'likes', 'klout', 'sentiment', 'isreshare', 'klout_norm', 'reach_norm', 'retweetcount_norm', 'likes_norm', 'virality_score']
+2025-05-03 23:35:33,301 - train - INFO - Using target: is_viral
+2025-05-03 23:35:33,303 - train - INFO - Data loaded: X_train: (3500, 11), y_train: (3500,), X_val: (750, 11), y_val: (750,)
+2025-05-03 23:35:33,303 - train - INFO - Class distribution - Train: 9.34% viral, Val: 10.00% viral
+2025-05-03 23:35:33,303 - train - INFO - Training mlp model
+2025-05-03 23:36:18,527 - train - INFO - Loading processed dataset
+2025-05-03 23:36:18,544 - train - INFO - Using features: ['reach', 'retweetcount', 'likes', 'klout', 'sentiment', 'isreshare', 'klout_norm', 'reach_norm', 'retweetcount_norm', 'likes_norm', 'virality_score']
+2025-05-03 23:36:18,544 - train - INFO - Using target: is_viral
+2025-05-03 23:36:18,546 - train - INFO - Data loaded: X_train: (3500, 11), y_train: (3500,), X_val: (750, 11), y_val: (750,)
+2025-05-03 23:36:18,546 - train - INFO - Class distribution - Train: 9.34% viral, Val: 10.00% viral
+2025-05-03 23:36:18,547 - train - INFO - Training mlp model
+2025-05-03 23:36:18,714 - train - INFO - Training completed in 0.17 seconds
+2025-05-03 23:36:18,714 - train - INFO - Results saved to /Users/dhruvjalan/IML-FinalProject/twitter-abm-viral/src/../results/mlp_processed_results.csv
+2025-05-03 23:36:18,715 - train - INFO - Configuration saved to /Users/dhruvjalan/IML-FinalProject/twitter-abm-viral/src/../results/mlp_processed_config.yaml
+2025-05-03 23:36:18,715 - train - INFO - Training of mlp model completed successfully
+2025-05-05 00:33:29,472 - train - INFO - Loading processed dataset
+2025-05-05 00:34:01,520 - train - INFO - Using features: ['reach', 'retweetcount', 'likes', 'klout', 'sentiment', 'isreshare', 'virality_score']
+2025-05-05 00:34:01,520 - train - INFO - Using target: is_viral
+2025-05-05 00:34:01,527 - train - INFO - Data loaded: X_train: (5, 7), y_train: (5,), X_val: (3, 7), y_val: (3,)
+2025-05-05 00:34:01,527 - train - INFO - Class distribution - Train: 60.00% viral, Val: 66.67% viral
+2025-05-05 00:34:01,528 - train - INFO - Training cnn model
+2025-05-05 00:37:10,180 - train - INFO - Loading processed dataset
+2025-05-05 00:37:10,209 - train - INFO - Using features: ['reach', 'retweetcount', 'likes', 'klout', 'sentiment', 'isreshare', 'virality_score']
+2025-05-05 00:37:10,209 - train - INFO - Using target: is_viral
+2025-05-05 00:37:10,212 - train - INFO - Data loaded: X_train: (5, 7), y_train: (5,), X_val: (3, 7), y_val: (3,)
+2025-05-05 00:37:10,212 - train - INFO - Class distribution - Train: 60.00% viral, Val: 66.67% viral
+2025-05-05 00:37:10,212 - train - INFO - Training cnn model
+2025-05-05 00:44:12,338 - train - INFO - Loading processed dataset
+2025-05-05 00:44:25,298 - train - INFO - Using features: ['reach', 'retweetcount', 'likes', 'klout', 'sentiment', 'isreshare', 'virality_score']
+2025-05-05 00:44:25,298 - train - INFO - Using target: is_viral
+2025-05-05 00:44:25,308 - train - INFO - Data loaded: X_train: (5, 7), y_train: (5,), X_val: (3, 7), y_val: (3,)
+2025-05-05 00:44:25,309 - train - INFO - Class distribution - Train: 60.00% viral, Val: 66.67% viral
+2025-05-05 00:44:25,309 - train - INFO - Training cnn model
+2025-05-05 00:57:53,923 - train - INFO - Loading processed dataset
+2025-05-05 00:58:21,165 - train - INFO - Using features: ['reach', 'retweetcount', 'likes', 'klout', 'sentiment', 'isreshare', 'virality_score']
+2025-05-05 00:58:21,166 - train - INFO - Using target: is_viral
+2025-05-05 00:58:21,171 - train - INFO - Data loaded: X_train: (5, 7), y_train: (5,), X_val: (3, 7), y_val: (3,)
+2025-05-05 00:58:21,171 - train - INFO - Class distribution - Train: 60.00% viral, Val: 66.67% viral
+2025-05-05 00:58:21,171 - train - INFO - Training cnn model
+2025-05-05 00:59:21,754 - train - INFO - Loading processed dataset
+2025-05-05 00:59:21,793 - train - INFO - Using features: ['reach', 'retweetcount', 'likes', 'klout', 'sentiment', 'isreshare', 'virality_score']
+2025-05-05 00:59:21,793 - train - INFO - Using target: is_viral
+2025-05-05 00:59:21,803 - train - INFO - Data loaded: X_train: (5, 7), y_train: (5,), X_val: (3, 7), y_val: (3,)
+2025-05-05 00:59:21,803 - train - INFO - Class distribution - Train: 60.00% viral, Val: 66.67% viral
+2025-05-05 00:59:21,803 - train - INFO - Training cnn model
+2025-05-05 01:03:01,582 - train - INFO - Loading processed dataset
+2025-05-05 01:03:06,204 - train - INFO - Using features: ['reach', 'retweetcount', 'likes', 'klout', 'sentiment', 'isreshare', 'virality_score']
+2025-05-05 01:03:06,204 - train - INFO - Using target: is_viral
+2025-05-05 01:03:06,210 - train - INFO - Data loaded: X_train: (5, 7), y_train: (5,), X_val: (3, 7), y_val: (3,)
+2025-05-05 01:03:06,210 - train - INFO - Class distribution - Train: 60.00% viral, Val: 66.67% viral
+2025-05-05 01:03:06,210 - train - INFO - Training cnn model
+2025-05-05 01:08:01,954 - train - INFO - Loading processed dataset
+2025-05-05 01:08:11,383 - train - INFO - Using features: ['reach', 'retweetcount', 'likes', 'klout', 'sentiment', 'isreshare', 'virality_score']
+2025-05-05 01:08:11,384 - train - INFO - Using target: is_viral
+2025-05-05 01:08:11,394 - train - INFO - Data loaded: X_train: (5, 7), y_train: (5,), X_val: (3, 7), y_val: (3,)
+2025-05-05 01:08:11,394 - train - INFO - Class distribution - Train: 60.00% viral, Val: 66.67% viral
+2025-05-05 01:08:11,395 - train - INFO - Training cnn model
+2025-05-05 01:17:41,938 - train - INFO - Loading processed dataset
+2025-05-05 01:17:48,203 - train - INFO - Using features: ['reach', 'retweetcount', 'likes', 'klout', 'sentiment', 'isreshare', 'virality_score']
+2025-05-05 01:17:48,203 - train - INFO - Using target: is_viral
+2025-05-05 01:17:48,209 - train - INFO - Data loaded: X_train: (5, 7), y_train: (5,), X_val: (3, 7), y_val: (3,)
+2025-05-05 01:17:48,209 - train - INFO - Class distribution - Train: 60.00% viral, Val: 66.67% viral
+2025-05-05 01:17:48,209 - train - INFO - Training svm model
+2025-05-05 01:18:40,925 - train - INFO - Loading processed dataset
+2025-05-05 01:18:40,944 - train - INFO - Using features: ['reach', 'retweetcount', 'likes', 'klout', 'sentiment', 'isreshare', 'virality_score']
+2025-05-05 01:18:40,944 - train - INFO - Using target: is_viral
+2025-05-05 01:18:40,948 - train - INFO - Data loaded: X_train: (5, 7), y_train: (5,), X_val: (3, 7), y_val: (3,)
+2025-05-05 01:18:40,948 - train - INFO - Class distribution - Train: 60.00% viral, Val: 66.67% viral
+2025-05-05 01:18:40,948 - train - INFO - Training svm model
+2025-05-05 01:19:27,723 - train - INFO - Loading processed dataset
+2025-05-05 01:19:27,735 - train - INFO - Using features: ['reach', 'retweetcount', 'likes', 'klout', 'sentiment', 'isreshare', 'virality_score']
+2025-05-05 01:19:27,735 - train - INFO - Using target: is_viral
+2025-05-05 01:19:27,740 - train - INFO - Data loaded: X_train: (5, 7), y_train: (5,), X_val: (3, 7), y_val: (3,)
+2025-05-05 01:19:27,740 - train - INFO - Class distribution - Train: 60.00% viral, Val: 66.67% viral
+2025-05-05 01:19:27,740 - train - INFO - Training svm model
+2025-05-05 01:20:17,307 - train - INFO - Loading processed dataset
+2025-05-05 01:20:17,357 - train - INFO - Using features: ['reach', 'retweetcount', 'likes', 'klout', 'sentiment', 'isreshare', 'virality_score']
+2025-05-05 01:20:17,357 - train - INFO - Using target: is_viral
+2025-05-05 01:20:17,362 - train - INFO - Data loaded: X_train: (5, 7), y_train: (5,), X_val: (3, 7), y_val: (3,)
+2025-05-05 01:20:17,362 - train - INFO - Class distribution - Train: 60.00% viral, Val: 66.67% viral
+2025-05-05 01:20:17,362 - train - INFO - Training svm model
+2025-05-05 01:20:17,590 - train - INFO - Training completed in 0.23 seconds
+2025-05-05 01:20:17,594 - train - INFO - Results saved to /Users/dhruvjalan/Desktop/IML-FinalProject/twitter-abm-viral/src/../results/svm_processed_results.csv
+2025-05-05 01:20:17,595 - train - INFO - Configuration saved to /Users/dhruvjalan/Desktop/IML-FinalProject/twitter-abm-viral/src/../results/svm_processed_config.yaml
+2025-05-05 01:20:17,595 - train - INFO - Training of svm model completed successfully
+2025-05-05 17:19:06,395 - train - INFO - Loading processed dataset
+2025-05-05 17:20:07,891 - train - INFO - Using features: ['reach', 'retweetcount', 'likes', 'klout', 'sentiment', 'isreshare', 'virality_score']
+2025-05-05 17:20:07,891 - train - INFO - Using target: is_viral
+2025-05-05 17:20:07,899 - train - INFO - Data loaded: X_train: (5, 7), y_train: (5,), X_val: (3, 7), y_val: (3,)
+2025-05-05 17:20:07,899 - train - INFO - Class distribution - Train: 60.00% viral, Val: 66.67% viral
+2025-05-05 17:20:07,900 - train - INFO - Training cnn model
+2025-05-05 17:24:37,922 - train - INFO - Loading processed dataset
+2025-05-05 17:24:45,215 - train - INFO - Using features: ['reach', 'retweetcount', 'likes', 'klout', 'sentiment', 'isreshare', 'virality_score']
+2025-05-05 17:24:45,215 - train - INFO - Using target: is_viral
+2025-05-05 17:24:45,219 - train - INFO - Data loaded: X_train: (5, 7), y_train: (5,), X_val: (3, 7), y_val: (3,)
+2025-05-05 17:24:45,220 - train - INFO - Class distribution - Train: 60.00% viral, Val: 66.67% viral
+2025-05-05 17:24:45,220 - train - INFO - Training svm model
+2025-05-05 17:24:45,355 - train - INFO - Training completed in 0.13 seconds
+2025-05-05 17:25:27,309 - train - INFO - Results saved to /Users/dhruvjalan/Desktop/IML-FinalProject/twitter-abm-viral/src/../results/svm_processed_results.csv
+2025-05-05 17:25:30,646 - train - INFO - Configuration saved to /Users/dhruvjalan/Desktop/IML-FinalProject/twitter-abm-viral/src/../results/svm_processed_config.yaml
+2025-05-05 17:25:30,649 - train - INFO - Model saved to /Users/dhruvjalan/Desktop/IML-FinalProject/twitter-abm-viral/src/../models_saved/svm_processed_model.npz
+2025-05-05 17:25:30,649 - train - INFO - Model also saved to /Users/dhruvjalan/Desktop/IML-FinalProject/twitter-abm-viral/src/../results/svm_best.npz
+2025-05-05 17:25:30,649 - train - INFO - Training of svm model completed successfully
+2025-05-05 17:27:58,885 - train - INFO - Loading processed dataset
+2025-05-05 17:27:58,896 - train - INFO - Using features: ['reach', 'retweetcount', 'likes', 'klout', 'sentiment', 'isreshare', 'virality_score']
+2025-05-05 17:27:58,897 - train - INFO - Using target: is_viral
+2025-05-05 17:27:58,901 - train - INFO - Data loaded: X_train: (5, 7), y_train: (5,), X_val: (3, 7), y_val: (3,)
+2025-05-05 17:27:58,901 - train - INFO - Class distribution - Train: 60.00% viral, Val: 66.67% viral
+2025-05-05 17:27:58,901 - train - INFO - Training mlp model
+2025-05-05 17:28:06,398 - train - INFO - Loading processed dataset
+2025-05-05 17:28:06,404 - train - INFO - Using features: ['reach', 'retweetcount', 'likes', 'klout', 'sentiment', 'isreshare', 'virality_score']
+2025-05-05 17:28:06,404 - train - INFO - Using target: is_viral
+2025-05-05 17:28:06,405 - train - INFO - Data loaded: X_train: (5, 7), y_train: (5,), X_val: (3, 7), y_val: (3,)
+2025-05-05 17:28:06,405 - train - INFO - Class distribution - Train: 60.00% viral, Val: 66.67% viral
+2025-05-05 17:28:06,405 - train - INFO - Training pca model
+2025-05-05 17:28:37,172 - train - INFO - Loading processed dataset
+2025-05-05 17:28:37,181 - train - INFO - Using features: ['reach', 'retweetcount', 'likes', 'klout', 'sentiment', 'isreshare', 'virality_score']
+2025-05-05 17:28:37,181 - train - INFO - Using target: is_viral
+2025-05-05 17:28:37,184 - train - INFO - Data loaded: X_train: (5, 7), y_train: (5,), X_val: (3, 7), y_val: (3,)
+2025-05-05 17:28:37,184 - train - INFO - Class distribution - Train: 60.00% viral, Val: 66.67% viral
+2025-05-05 17:28:37,184 - train - INFO - Training svm model
+2025-05-05 17:28:37,255 - train - INFO - Training completed in 0.07 seconds
+2025-05-05 17:28:37,256 - train - INFO - Results saved to /Users/dhruvjalan/Desktop/IML-FinalProject/twitter-abm-viral/src/../results/svm_processed_results.csv
+2025-05-05 17:28:37,257 - train - INFO - Configuration saved to /Users/dhruvjalan/Desktop/IML-FinalProject/twitter-abm-viral/src/../results/svm_processed_config.yaml
+2025-05-05 17:28:37,259 - train - INFO - Model saved to /Users/dhruvjalan/Desktop/IML-FinalProject/twitter-abm-viral/src/../models_saved/svm_processed_model.npz
+2025-05-05 17:28:37,259 - train - INFO - Model also saved to /Users/dhruvjalan/Desktop/IML-FinalProject/twitter-abm-viral/src/../results/svm_best.npz
+2025-05-05 17:28:37,259 - train - INFO - Training of svm model completed successfully

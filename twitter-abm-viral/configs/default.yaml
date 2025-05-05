@@ -1,0 +1,96 @@
+# Default configuration for Viral-Cascade ABM
+
+# Random seed for reproducibility
+random_seed: 42
+
+# Data configuration
+data:
+  raw_dir: "data/raw"
+  processed_dir: "data/processed"
+  processed_path: "data/processed"  # Required by evaluate.py
+  filename: "retweet_analysis.csv"
+  train_ratio: 0.7
+  val_ratio: 0.15
+  test_ratio: 0.15   # Added explicitly
+  train_size: 0.7    # Required by evaluate.py
+  val_size: 0.15     # Required by evaluate.py
+  test_size: 0.15    # Required by evaluate.py
+  random_seed: 42    # Required by evaluate.py
+
+# Virality classification method
+# Options: 'retweet_threshold', 'composite_score', 'multi_class'
+virality_method: "retweet_threshold"
+
+# Agent-based model configuration
+abm:
+  num_agents: 10000
+  simulation_steps: 48  # Hours to simulate
+  influence_factor: 0.7
+  susceptibility_factor: 0.3
+  network_density: 0.01
+  calibration_epochs: 10
+
+# Model training configuration
+training:
+  batch_size: 32
+  learning_rate: 0.001
+  epochs: 50
+  early_stopping_patience: 5
+  weight_decay: 0.0001
+  metrics: ["accuracy", "f1", "roc_auc", "pr_auc"]
+  checkpoint_dir: "results"
+  log_dir: "logs"
+
+# Model configurations
+models:
+  # ---------------- CNN ----------------
+  cnn:
+    filters:       [32, 64]
+    kernel_sizes:  [3, 3]
+    pool_sizes:    [2, 2]
+    dense_layers:  [128, 64]   # fully-connected sizes
+    dropout_rate:  0.3
+    batch_size:    32          # fallback if not provided in training block
+    learning_rate: 0.001
+    epochs:        50
+
+  # -------------- Transformer ----------
+  transformer:
+    d_model:       64
+    num_heads:     4
+    num_layers:    2
+    d_ff:          256
+    dropout_rate:  0.1
+    batch_size:    32
+    learning_rate: 0.001
+    epochs:        50
+    embed_dim:     64          # Alias for d_model
+    dropout:       0.1         # Alias for dropout_rate
+
+  # ----------------- MLP ---------------
+  mlp:
+    hidden_layers: [128, 64, 32]
+    activation:    relu
+    dropout_rate:  0.2
+    batch_size:    32
+    learning_rate: 0.001
+    epochs:        50
+
+  # ----------------- SVM ---------------
+  svm:
+    kernel:        rbf
+    C:             1.0
+    gamma:         scale
+    max_iter:      1000
+    tol:           1e-3
+
+  # --------- Dimension reduction -------
+  dimension_reduction:
+    n_components:  10
+    whiten:        true
+
+# Evaluation configuration
+evaluation:
+  bootstrap_samples: 1000
+  confidence_level: 0.95
+  figures_dir: "reports/figures" 

@@ -1,0 +1,18 @@
+2025-05-03 23:34:31,224 - preprocess - INFO - Starting data preprocessing
+2025-05-03 23:34:31,224 - preprocess - INFO - Loading raw data from data/raw/retweet_analysis.csv
+2025-05-03 23:34:31,243 - preprocess - INFO - Loaded 5000 records
+2025-05-03 23:34:31,243 - preprocess - INFO - Performing basic data cleaning
+2025-05-03 23:34:31,249 - preprocess - INFO - Creating additional features
+2025-05-03 23:34:31,255 - preprocess - INFO - Using retweet threshold (16.0) for virality
+2025-05-03 23:34:31,255 - preprocess - INFO - Classified 487 tweets as viral (9.74%)
+2025-05-03 23:34:31,255 - preprocess - INFO - Generating time-series features
+2025-05-03 23:34:31,272 - preprocess - INFO - Creating synthetic network data for ABM
+2025-05-03 23:34:31,272 - preprocess - INFO - Found 822 unique user locations
+2025-05-03 23:34:31,273 - preprocess - INFO - Saving processed data
+2025-05-03 23:34:31,327 - preprocess - INFO - Saved processed tweet data to data/processed/tweets_processed.csv
+2025-05-03 23:34:31,329 - preprocess - INFO - Saved time series data to data/processed/tweet_timeseries.csv
+2025-05-03 23:34:31,332 - preprocess - INFO - Saved user network data to data/processed/user_network.csv
+2025-05-03 23:34:31,332 - preprocess - INFO - Creating dataset splits
+2025-05-03 23:34:31,390 - preprocess - INFO - Saved 3500 training samples, 750 validation samples, 750 test samples
+2025-05-03 23:34:31,390 - preprocess - INFO - Preprocessing complete
+2025-05-03 23:34:31,390 - preprocess - INFO - Preprocessing completed successfully

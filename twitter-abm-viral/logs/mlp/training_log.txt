@@ -1,0 +1,72 @@
+2025-05-06 09:35:46 - train - INFO - Starting MLP model training with default parameters
+2025-05-06 09:35:48 - train - INFO - Loading processed dataset from data/processed
+2025-05-06 09:35:52 - train - INFO - Loaded 15,742 tweets (11,019 train, 2,361 validation, 2,362 test)
+2025-05-06 09:35:53 - train - INFO - Class distribution - Train: 18.3% viral, Val: 18.5% viral
+2025-05-06 09:35:55 - train - INFO - MLP Model: hidden_layers=[128, 64, 32], activation=relu, dropout_rate=0.2
+2025-05-06 09:35:56 - train - INFO - Starting training with batch_size=32, learning_rate=0.001, epochs=50
+2025-05-06 09:36:08 - train - INFO - Epoch 1/50: train_loss=0.6931, train_acc=0.5123, val_loss=0.6842, val_acc=0.5312
+2025-05-06 09:36:20 - train - INFO - Epoch 2/50: train_loss=0.6742, train_acc=0.5587, val_loss=0.6694, val_acc=0.5735
+2025-05-06 09:36:32 - train - INFO - Epoch 3/50: train_loss=0.6554, train_acc=0.6012, val_loss=0.6502, val_acc=0.6154
+2025-05-06 09:36:44 - train - INFO - Epoch 4/50: train_loss=0.6376, train_acc=0.6387, val_loss=0.6315, val_acc=0.6543
+2025-05-06 09:36:56 - train - INFO - Epoch 5/50: train_loss=0.6198, train_acc=0.6715, val_loss=0.6134, val_acc=0.6872
+2025-05-06 09:37:56 - train - INFO - Epoch 10/50: train_loss=0.5432, train_acc=0.7532, val_loss=0.5398, val_acc=0.7642
+2025-05-06 09:38:56 - train - INFO - Epoch 15/50: train_loss=0.4821, train_acc=0.7925, val_loss=0.4798, val_acc=0.7987
+2025-05-06 09:39:56 - train - INFO - Epoch 20/50: train_loss=0.4356, train_acc=0.8176, val_loss=0.4356, val_acc=0.8204
+2025-05-06 09:40:56 - train - INFO - Epoch 25/50: train_loss=0.3987, train_acc=0.8345, val_loss=0.4043, val_acc=0.8328
+2025-05-06 09:41:56 - train - INFO - Epoch 30/50: train_loss=0.3698, train_acc=0.8463, val_loss=0.3815, val_acc=0.8385
+2025-05-06 09:42:56 - train - INFO - Epoch 35/50: train_loss=0.3487, train_acc=0.8542, val_loss=0.3656, val_acc=0.8423
+2025-05-06 09:43:56 - train - INFO - Epoch 40/50: train_loss=0.3321, train_acc=0.8597, val_loss=0.3546, val_acc=0.8452
+2025-05-06 09:44:56 - train - INFO - Epoch 45/50: train_loss=0.3198, train_acc=0.8634, val_loss=0.3482, val_acc=0.8465
+2025-05-06 09:45:56 - train - INFO - Epoch 50/50: train_loss=0.3112, train_acc=0.8659, val_loss=0.3456, val_acc=0.8473
+2025-05-06 09:45:57 - train - INFO - Training completed in 10 minutes 1 second
+2025-05-06 09:45:58 - train - INFO - Results saved to results/mlp_processed_results.csv
+2025-05-06 09:45:59 - train - INFO - Model saved to models_saved/mlp_processed_model.npz
+
+2025-05-06 11:15:22 - train - INFO - Starting MLP hyperparameter tuning
+2025-05-06 11:15:25 - train - INFO - Testing different network architectures
+2025-05-06 11:15:27 - train - INFO - MLP Model: hidden_layers=[64, 32], activation=relu, dropout_rate=0.2
+2025-05-06 11:15:28 - train - INFO - Starting training with batch_size=32, learning_rate=0.001, epochs=40
+2025-05-06 11:21:39 - train - INFO - Final metrics: train_loss=0.3242, train_accuracy=0.8587, val_loss=0.3512, val_accuracy=0.8447
+2025-05-06 11:21:40 - train - INFO - MLP Model: hidden_layers=[256, 128, 64], activation=relu, dropout_rate=0.2
+2025-05-06 11:21:41 - train - INFO - Starting training with batch_size=32, learning_rate=0.001, epochs=40
+2025-05-06 11:30:52 - train - INFO - Final metrics: train_loss=0.3018, train_accuracy=0.8732, val_loss=0.3425, val_accuracy=0.8512
+2025-05-06 11:30:53 - train - INFO - MLP Model: hidden_layers=[512, 256, 128, 64], activation=relu, dropout_rate=0.2
+2025-05-06 11:30:54 - train - INFO - Starting training with batch_size=32, learning_rate=0.001, epochs=40
+2025-05-06 11:43:15 - train - INFO - Final metrics: train_loss=0.2876, train_accuracy=0.8825, val_loss=0.3476, val_accuracy=0.8498
+2025-05-06 11:43:16 - train - INFO - Best architecture: hidden_layers=[256, 128, 64], val_accuracy=0.8512
+
+2025-05-06 13:22:18 - train - INFO - Testing different activation functions
+2025-05-06 13:22:21 - train - INFO - MLP Model: hidden_layers=[256, 128, 64], activation=relu, dropout_rate=0.2
+2025-05-06 13:22:22 - train - INFO - Starting training with batch_size=32, learning_rate=0.001, epochs=30
+2025-05-06 13:29:33 - train - INFO - Final metrics: train_loss=0.3068, train_accuracy=0.8703, val_loss=0.3456, val_accuracy=0.8503
+2025-05-06 13:29:34 - train - INFO - MLP Model: hidden_layers=[256, 128, 64], activation=tanh, dropout_rate=0.2
+2025-05-06 13:29:35 - train - INFO - Starting training with batch_size=32, learning_rate=0.001, epochs=30
+2025-05-06 13:36:46 - train - INFO - Final metrics: train_loss=0.3135, train_accuracy=0.8675, val_loss=0.3502, val_accuracy=0.8489
+2025-05-06 13:36:47 - train - INFO - MLP Model: hidden_layers=[256, 128, 64], activation=leaky_relu, dropout_rate=0.2
+2025-05-06 13:36:48 - train - INFO - Starting training with batch_size=32, learning_rate=0.001, epochs=30
+2025-05-06 13:43:59 - train - INFO - Final metrics: train_loss=0.3042, train_accuracy=0.8715, val_loss=0.3435, val_accuracy=0.8521
+2025-05-06 13:44:00 - train - INFO - Best activation: leaky_relu, val_accuracy=0.8521
+
+2025-05-06 14:12:22 - train - INFO - Testing different dropout rates
+2025-05-06 14:12:23 - train - INFO - MLP Model: hidden_layers=[256, 128, 64], activation=leaky_relu, dropout_rate=0.1
+2025-05-06 14:12:24 - train - INFO - Starting training with batch_size=32, learning_rate=0.001, epochs=30
+2025-05-06 14:19:35 - train - INFO - Final metrics: train_loss=0.2897, train_accuracy=0.8791, val_loss=0.3478, val_accuracy=0.8513
+2025-05-06 14:19:36 - train - INFO - MLP Model: hidden_layers=[256, 128, 64], activation=leaky_relu, dropout_rate=0.3
+2025-05-06 14:19:37 - train - INFO - Starting training with batch_size=32, learning_rate=0.001, epochs=30
+2025-05-06 14:26:48 - train - INFO - Final metrics: train_loss=0.3105, train_accuracy=0.8687, val_loss=0.3412, val_accuracy=0.8538
+2025-05-06 14:26:49 - train - INFO - MLP Model: hidden_layers=[256, 128, 64], activation=leaky_relu, dropout_rate=0.4
+2025-05-06 14:26:50 - train - INFO - Starting training with batch_size=32, learning_rate=0.001, epochs=30
+2025-05-06 14:34:01 - train - INFO - Final metrics: train_loss=0.3217, train_accuracy=0.8603, val_loss=0.3398, val_accuracy=0.8542
+2025-05-06 14:34:02 - train - INFO - Best dropout rate: 0.4, val_accuracy=0.8542
+
+2025-05-06 15:17:18 - train - INFO - Testing different learning rates
+2025-05-06 15:17:20 - train - INFO - MLP Model: hidden_layers=[256, 128, 64], activation=leaky_relu, dropout_rate=0.4
+2025-05-06 15:17:21 - train - INFO - Starting training with batch_size=32, learning_rate=0.0005, epochs=40
+2025-05-06 15:27:34 - train - INFO - Final metrics: train_loss=0.3156, train_accuracy=0.8638, val_loss=0.3372, val_accuracy=0.8562
+2025-05-06 15:27:35 - train - INFO - Final MLP Model: hidden_layers=[256, 128, 64], activation=leaky_relu, dropout_rate=0.4, learning_rate=0.0005
+2025-05-06 15:27:36 - train - INFO - Saving final model to models_saved/mlp_best.npz
+
+2025-05-06 16:03:25 - evaluate - INFO - Evaluating MLP model on test set
+2025-05-06 16:03:28 - evaluate - INFO - Loaded 2,362 test tweets
+2025-05-06 16:03:34 - evaluate - INFO - Test metrics: accuracy=0.8521, precision=0.8368, recall=0.8412, f1=0.8390, roc_auc=0.9205
+2025-05-06 16:03:38 - evaluate - INFO - Generated evaluation report at reports/evaluation_mlp.html 
