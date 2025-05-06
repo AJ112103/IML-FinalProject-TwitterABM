@@ -1,30 +1,25 @@
-# Default configuration for Viral-Cascade ABM
-
-# Random seed for reproducibility
 random_seed: 42
 
 # Data configuration
 data:
   raw_dir: "data/raw"
   processed_dir: "data/processed"
-  processed_path: "data/processed"  # Required by evaluate.py
+  processed_path: "data/processed" 
   filename: "retweet_analysis.csv"
   train_ratio: 0.7
   val_ratio: 0.15
-  test_ratio: 0.15   # Added explicitly
-  train_size: 0.7    # Required by evaluate.py
-  val_size: 0.15     # Required by evaluate.py
-  test_size: 0.15    # Required by evaluate.py
-  random_seed: 42    # Required by evaluate.py
+  test_ratio: 0.15   
+  train_size: 0.7  
+  val_size: 0.15   
+  test_size: 0.15  
+  random_seed: 42  
 
-# Virality classification method
-# Options: 'retweet_threshold', 'composite_score', 'multi_class'
 virality_method: "retweet_threshold"
 
 # Agent-based model configuration
 abm:
   num_agents: 10000
-  simulation_steps: 48  # Hours to simulate
+  simulation_steps: 48  
   influence_factor: 0.7
   susceptibility_factor: 0.3
   network_density: 0.01
@@ -48,9 +43,9 @@ models:
     filters:       [32, 64]
     kernel_sizes:  [3, 3]
     pool_sizes:    [2, 2]
-    dense_layers:  [128, 64]   # fully-connected sizes
+    dense_layers:  [128, 64]   
     dropout_rate:  0.3
-    batch_size:    32          # fallback if not provided in training block
+    batch_size:    32          
     learning_rate: 0.001
     epochs:        50
 
@@ -64,8 +59,8 @@ models:
     batch_size:    32
     learning_rate: 0.001
     epochs:        50
-    embed_dim:     64          # Alias for d_model
-    dropout:       0.1         # Alias for dropout_rate
+    embed_dim:     64          
+    dropout:       0.1        
 
   # ----------------- MLP ---------------
   mlp:

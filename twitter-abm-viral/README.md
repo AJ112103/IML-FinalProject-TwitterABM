@@ -312,61 +312,6 @@ A key achievement was the ability to predict virality early in a tweet's lifecyc
 
 The Transformer's superior performance in early detection (86.54% accuracy at just 6 hours) demonstrates its ability to identify subtle temporal signatures of virality potential.
 
-## Usage
-
-```bash
-# Set up environment
-python -m venv .venv && source .venv/bin/activate && pip install -r requirements.txt
-
-# Download and preprocess data
-python src/data/download.py
-python src/data/preprocess.py --config configs/default.yaml
-
-# Train a model (choose from: cnn, transformer, mlp, svm, pca, ica)
-# Method 1: Using the run_model.sh script (recommended)
-./run_model.sh train --model transformer --config configs/default.yaml
-
-# Method 2: Using Python module syntax 
-python -m src.train --model transformer --config configs/default.yaml
-
-# Evaluate the model
-# Method 1: Using the run_model.sh script (recommended)
-./run_model.sh evaluate --model transformer --config configs/default.yaml --ckpt results/transformer_best.npz
-
-# Method 2: Using Python module syntax
-python -m src.evaluate --model transformer --config configs/default.yaml --ckpt results/transformer_best.npz
-```
-
-## Project Structure
-
-```
-twitter-abm-viral/
-├── data/
-│   ├── raw/              # original CSV data
-│   └── processed/        # CSV/NPY cleaned artifacts, synthetic cascades
-├── src/
-│   ├── agent_sim/        # RetweetAgent, simulator.py
-│   ├── models/
-│   │   ├── base.py       # shared layers & utils
-│   │   ├── cnn.py
-│   │   ├── pca_ica.py
-│   │   ├── transformer.py
-│   │   └── classical.py  # MLP & SVM
-│   ├── data/             # data processing utilities
-│   ├── train.py
-│   └── evaluate.py
-├── configs/
-│   └── default.yaml
-├── notebooks/
-│   └── colab_demo.ipynb
-├── logs/                 # training logs & metrics
-├── results/              # model weights, predictions
-├── reports/
-│   └── figures/          # png/svg plots
-├── run_model.sh          # Helper script for running models
-└── README.md
-```
-
 ## Conclusion and Future Work
 
 Our work demonstrates the effectiveness of combining agent-based modeling with custom machine learning implementations for tweet virality prediction. The Transformer model achieved the best performance (91.23% accuracy), significantly outperforming traditional approaches.

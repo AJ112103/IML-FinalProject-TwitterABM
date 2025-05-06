@@ -1,16 +1,9 @@
-#!/usr/bin/env python3
-"""
-Download Twitter Retweet Analysis dataset from Kaggle.
-Requires Kaggle API credentials (kaggle.json) in ~/.kaggle/
-"""
-
 import os
 import sys
 import logging
 import subprocess
 from pathlib import Path
 
-# Setup logging
 os.makedirs(os.path.join(os.path.dirname(__file__), '..', '..', 'logs'), exist_ok=True)
 logging.basicConfig(
     level=logging.INFO,
@@ -22,11 +15,9 @@ logging.basicConfig(
 )
 logger = logging.getLogger('download')
 
-# Define dataset variables
 DATASET_NAME = "mulengakawimbe89/in-depth-twitter-retweet-analysis-dataset"
 
 def check_kaggle_credentials():
-    """Check if Kaggle API credentials are available."""
     cred_path = Path.home() / '.kaggle' / 'kaggle.json'
     if not cred_path.exists():
         logger.error(f"Kaggle credentials not found at {cred_path}")
@@ -34,8 +25,7 @@ def check_kaggle_credentials():
         logger.info("and place kaggle.json in the ~/.kaggle/ directory")
         logger.info("Then run: chmod 600 ~/.kaggle/kaggle.json")
         sys.exit(1)
-    
-    # Check if file has proper permissions
+
     if oct(cred_path.stat().st_mode)[-3:] != '600':
         logger.warning(f"Kaggle credentials file has incorrect permissions: {oct(cred_path.stat().st_mode)[-3:]}")
         logger.warning("For security, permissions should be 600. Fixing...")
@@ -50,7 +40,6 @@ def check_kaggle_credentials():
     return True
 
 def download_dataset(output_dir="data/raw"):
-    """Download the Twitter Retweet Analysis dataset from Kaggle."""
     os.makedirs(output_dir, exist_ok=True)
     
     logger.info(f"Downloading dataset {DATASET_NAME} to {output_dir}...")
@@ -60,7 +49,6 @@ def download_dataset(output_dir="data/raw"):
             check=True
         )
         logger.info("Download completed successfully")
-        # Rename file to a more standard name
         try:
             csv_path = os.path.join(output_dir, "In-Depth Twitter Retweet Analysis Dataset.csv")
             new_path = os.path.join(output_dir, "retweet_analysis.csv")
@@ -74,12 +62,9 @@ def download_dataset(output_dir="data/raw"):
         sys.exit(1)
 
 def main():
-    """Main function to download the dataset."""
     logger.info("Starting dataset download process")
-    
-    # Check Kaggle credentials
+
     if check_kaggle_credentials():
-        # Download dataset
         download_dataset()
         logger.info("Dataset download process completed")
 
